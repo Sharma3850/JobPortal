@@ -1,0 +1,7 @@
+{
+  "name": "perfectJob",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
