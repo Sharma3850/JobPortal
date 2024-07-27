@@ -25,3 +25,15 @@
 #container a {
   text-decoration: none;
 }
+
+ion-img{
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 400px) {
+  ion-img {
+    width: 50%;
+  }
+}

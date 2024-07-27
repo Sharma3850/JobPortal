@@ -1,0 +1,52 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <div class="header-content">
+      <ion-icon name="chevron-back-outline" (click)="moveTo('home')"></ion-icon>
+      <ion-title>
+        <img src="https://t3.ftcdn.net/jpg/04/54/09/98/360_F_454099801_32LqElT2W1vgRQ6YRsp3h2IsKQxTCnaG.jpg"
+          alt="login Img" width="auto" height="130px">
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form (ngSubmit)="onSubmitUsingAuth()" #loginForm="ngForm">
+    <ion-card>
+      <ion-text>UserName</ion-text>
+      <ion-item lines="none">
+        
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="formData.username" type="email" name="username" placeholder="Enter UserName"
+          class="input-fields" [clearInput]="true" required></ion-input>
+          <ion-label *ngIf="formData.username == '' && (isSubmit || isEmail)">Enter username</ion-label>
+        </ion-item>
+        
+        <br>
+        <ion-text>Password</ion-text>
+        <ion-item lines="none">
+          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          <ion-input [(ngModel)]="formData.password" type="password" name="password" placeholder="Enter password"
+          class="input-fields" [clearInput]="true" required>
+          <ion-input-password-toggle slot="end" color="dark"></ion-input-password-toggle>
+        </ion-input>
+        <ion-label *ngIf="formData.password == '' && isSubmit">Enter password</ion-label>
+      </ion-item>
+      <br>
+      <div class="resetPassword">
+        <a style="color: blue;" (click)="onForget()">Forgot Password</a>
+      </div>
+      <ion-button type="submit" expand="full" shape="round" color="dark">Submit</ion-button>
+      <ion-button expand="full" shape="round" color="primary" (click)="onReset()">Reset</ion-button>
+    </ion-card>
+  </form>
+
+  
+
+  <div class="ion-text-center">
+    <p style="color: black;">
+      If don't have an account, please <a routerLink="/signup" style="color: blue;">Signup</a>
+    </p>
+  </div>
+</ion-content>

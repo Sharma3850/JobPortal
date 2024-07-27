@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" style="background-color: black;">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title style="color: white;">
+      Job Portal
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" style="background-color: black;">
+  <ion-header collapse="condense" >
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title style="margin:0 auto; width:fit-content; color: red;" size="medium">Your Specific Job Partner</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="container" class="ion-text-center" style="color: black; padding: 20px;">
+    <ion-img src="assets/imgs/logo.png"></ion-img>
+    <strong>Welcome to the Job Portal</strong>
+    <p>Find your dream job today!</p>
+    <p><em>"Unlock your potential, seize every opportunity."</em></p>
+    <p><em>"Your career starts here. Make it remarkable."</em></p>
+    <ion-button expand="block" color="dark" mode="ios" routerLink="/login">Login</ion-button>
+    <ion-button expand="block" color="dark" mode="ios" (click)="loginWithGoogle()">Login with Google</ion-button>
+    <ion-button expand="block" color="light" mode="ios" style="border: 1px solid black; border-radius:10px; color: black;" routerLink="/signup">Sign Up</ion-button>
   </div>
 </ion-content>
